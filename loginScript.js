@@ -7,7 +7,7 @@ function login(){
         window.location = "home.php";
         $("#informacion").hide();
       }else if(data == "success admin"){
-        window.location = "homeAdmin.php";
+        window.location = "http://localhost/PW/AdminPage/homeAdmin.php";
         $("#informacion").hide();
       }else {
         $("#informacion").show();
