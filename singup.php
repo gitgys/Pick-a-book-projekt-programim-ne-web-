@@ -31,7 +31,7 @@
         <div id="infoConfirmPassword"></div>
       </div>
       <div id="moshaDiv">
-      Mosha <input type="number" class="form-control" name="mosha" id="mosha" placeholder="Mosha">
+      Mosha <input type="number" min="7" max="120" class="form-control" name="mosha" id="mosha" placeholder="Mosha">
         <div id="infoMosha"></div>
       </div>
       <div id="gjiniaDiv">
@@ -57,7 +57,7 @@
           <input type="submit" class="btn btn-success"name="singup" id="singup" value="Sing up" onclick="singup()">
         </div>
         <div id="backDiv">
-          <a href="login.php"><input type="submit" class="btn btn-success" name="back" id="back" value="Back"></a>
+          <a href="http://localhost/PW/Log%20in%20&%20Sing%20up/login.php"><input type="submit" class="btn btn-success" name="back" id="back" value="Back"></a>
         </div>
       </div>
     </div>
