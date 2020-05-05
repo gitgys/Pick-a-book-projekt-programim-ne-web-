@@ -66,11 +66,6 @@ function singup(){
     $("#infoMosha").html("<p id='infoContent'>*vendos moshen</p>");
     $("#infoMosha").show();
     $("#infoPassword").hide();
-  }else if(mosha.trim() < 7){
-    // $("#infoMosha").hide();
-    $("#infoMosha").html("<p id='infoContent'>*vendos moshen me te madhe se 7</p>");
-    $("#infoMosha").show();
-    $("#infoPassword").hide();
   }else if(gjiniaChecked == false){
     $("#infoMosha").hide();
     $("#infoGjinia").html("<p id='infoContent'>*vendos gjinine</p>");
