@@ -28,12 +28,12 @@
           $queryInsert = "insert into PERDORUES (emri, mbiemri, username, password, mosha, gjinia, email, adresa) values ('$emri', '$mbiemri', '$username', '$password', $mosha, '$gjinia', '$email', '$adresa');";
           mysqli_query($connection, $queryInsert);
           echo "success";
-          mysqli_close($connection);
       }else{
         echo "email i zene";
       }
     }else{
       echo "username i zene";
     }
+    mysqli_close($connection);
   }
  ?>
