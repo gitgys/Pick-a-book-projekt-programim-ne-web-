@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style media="screen">
+    .headerClass{
+      position: relative;
+      display: block;
+      height: 150px;
+      margin-bottom: 30px;
+      background: rgb(54,151,249);
+      background: linear-gradient(0deg, rgba(54,151,249,1) 26%, rgba(44,172,221,1) 100%);
+    }
+
+    .adminClass{
+      position: relative;
+      display: inline-block;
+      left: 15px;
+      top: 15px;
+    }
+
+    .logoutClass{
+      display: inline;
+      position: absolute;
+      top: 10%;
+      right: 10px;
+      text-align: center;
+    }
+
+    .logoClass{
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      left: 33%;
+      right: 33%;
+      top: 5px;
+    }
+
+    .logoImgClass{
+      max-width: 250px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    </style>
+  </head>
+    <div class="headerClass">
+      <div class="adminClass">
+        <h2>ADMIN</h2>
+        <h3>
+        <?php
+          echo $_SESSION['username'];
+         ?>
+         </h3>
+      </div>
+      <div class="logoutClass">
+        <a href="logout.php"><button type="button" class="btn btn-danger">Logout</button></a><br>
+      </div>
+    </div>
+    <div class="logoClass">
+      <img src="Style/logo.png" alt="logo" class="logoImgClass">
+    </div>
