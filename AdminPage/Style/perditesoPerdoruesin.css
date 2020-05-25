@@ -1,0 +1,42 @@
+.search{
+  display: block;
+  margin: 0 auto;
+  float: right;
+}
+
+.searchBox{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.kerko{
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+
+#perdoruesSearchBox{
+  background-color: white;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#perdoruesSearchButton{
+  display: block;
+  position: absolute;
+  top: 250px;
+  width: 100%;
+}
+
+table{
+  border: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+th, td {
+  margin-top: 20px;
+  border: 1px solid black;
+  text-align: center;
+}

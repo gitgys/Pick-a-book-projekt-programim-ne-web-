@@ -1,0 +1,58 @@
+.search{
+  display: block;
+  position: relative;
+  float: right;
+  margin-right: 20px;
+}
+
+.searchBox{
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#perdoruesSearchBox{
+  background-color: white;
+  border-bottom-left-radius:  10px;
+  border-bottom-right-radius:  10px;
+}
+
+.searchButton{
+  display: inline;
+  float: right;
+}
+
+.functionsClass{
+  display: block;
+  position: relative;
+  left: 20px;
+  margin-bottom: 40px;
+}
+
+.a{
+  position: absolute;
+}
+
+ #perdorues1{
+  display: block;
+  text-align: center;
+}
+
+#perdoruesSearchButton{
+  display: block;
+  position: relative;
+  top: 190px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+table{
+  border: 1px solid black;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+}

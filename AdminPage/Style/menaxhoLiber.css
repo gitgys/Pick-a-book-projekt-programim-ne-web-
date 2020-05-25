@@ -1,0 +1,72 @@
+.search{
+  display: block;
+  position: relative;
+  float: right;
+}
+
+.searchBox{
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#liberSearchBox{
+  background-color: white;
+  border-bottom-left-radius:  10px;
+  border-bottom-right-radius:  10px;
+}
+
+.searchButton{
+  display: inline;
+  float: right;
+}
+
+.kerko{
+  display: inline;
+  margin-right: 10px;
+}
+
+.kerkimIAvancuar{
+  display: inline;
+  float: right;
+  position: relative;
+  margin-right: 20px;
+}
+
+
+.kerkimIAvancuarDiv{
+  margin-top: 5px;
+  text-align: center;
+}
+
+.functions{
+  display: block;
+  margin-left: 20px;
+}
+
+.shto, .back{
+  display: block;
+}
+
+.shto{
+  margin-bottom: 40px;
+}
+
+#liberSearchButton{
+  display: block;
+  position: relative;
+  top: 40px;
+}
+
+table{
+  border: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+th, td {
+  margin-top: 20px;
+  border: 1px solid black;
+  text-align: center;
+}

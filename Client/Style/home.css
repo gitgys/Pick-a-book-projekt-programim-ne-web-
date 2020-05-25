@@ -1,0 +1,93 @@
+.mainFunctions{
+  display: inline;
+  margin-left: 65px;
+}
+
+#prf{
+  margin-left: 20px;
+}
+
+.search{
+  display: inline;
+  float: right;
+}
+
+.searchBox{
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#liberSearchBox{
+  background-color: white;
+  border-bottom-left-radius:  10px;
+  border-bottom-right-radius:  10px;
+}
+
+.searchButton{
+  display: inline;
+  float: right;
+}
+
+.kerko{
+  display: inline;
+  margin-right: 10px;
+}
+
+.kerkimIAvancuar{
+  display: inline;
+  float: right;
+  position: relative;
+  margin-right: 20px;
+}
+
+
+.kerkimIAvancuarDiv{
+  margin-top: 5px;
+  text-align: center;
+}
+
+.librat{
+  display: block;
+  position: absolute;
+  width: 70%;
+  margin-top: 180px;
+  margin-left: 15%;
+  margin-right: auto;
+  text-align: center;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+}
+
+td{
+  width: 33%;
+  height: 300px;
+  text-align: center;
+}
+
+.cell{
+  width: 90%;
+  height: 90%;
+  margin: 10%;
+}
+
+.cell:hover{
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+}
+
+
+.paraPas{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.space{
+  display: inline-block;
+  width: 100px;
+}

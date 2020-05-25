@@ -1,0 +1,64 @@
+#profili{
+  margin-left: 40px;
+}
+
+.header{
+  display: block;
+}
+
+#back{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+#logout{
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+}
+
+
+.teDhenat{
+  display: inline-block;
+  width: 40%;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.username, .emri, .mbiemri, .mosha, .gjinia, .email, .adresa, .modifiko{
+  margin-bottom: 20px;
+}
+
+.divTabelaLibrat{
+  display: inline-block;
+  width: 40%;
+  float: right;
+  margin-right: 40px;
+  margin-top: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.tabelaLibrat{
+  width: 100%;
+}
+
+.divTabelaRezervime{
+  display: block;
+  margin-top: 40px;
+  margin-left: 40px;
+
+  display: inline-block;
+  width: 40%;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.tabelaRezervime{
+  width: 100%;
+}
+
+th,td{
+  border: solid;
+}
