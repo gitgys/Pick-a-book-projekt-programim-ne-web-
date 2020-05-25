@@ -226,8 +226,11 @@ function shtoLibrin(elem) {
       console.log(content);
       $("#tabela1").append(content);
     }else if(data == "libri ndodhet"){
-      //show warning qe libri ndodhet
       alert("Libri ndodhet");
+    }else if(data == "Nuk mund te merni me shume se 10 libra"){
+      alert("Nuk mund te merni me shume se 10 libra");
+    }else if(data == "Libri nuk eshte ne gjendje"){
+      alert("Libri nuk eshte ne gjendje");
     }else{
       alert(data);
     }

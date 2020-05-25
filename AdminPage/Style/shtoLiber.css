@@ -68,3 +68,13 @@
 .back{
   float: right;
 }
+
+#infoTitulli, #infoAutori, #infoZhaneri, #infoSasia{
+  background-color: #ED270822;
+  color: #ED2708;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}

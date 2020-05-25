@@ -67,6 +67,9 @@
              Adresa <input type="text" class="form-control" name="adresa" id="adresa" placeholder="Adresa">
            </div>
              <div id="infoAdresa"></div>
+             <div>
+              <input type="file" name="file" id="file">
+             </div>
            <div id="buttonatDiv">
              <div id="singupDiv">
                <input type="submit" class="btn btn-success"name="singup" id="singup" value="Shto Perdorues" onclick="shtoPerdorues()">

@@ -38,44 +38,54 @@
     $resultForCheckSasia = mysqli_query($connection, $queryCheckSasia);
     $rowResultForCheckSasia = mysqli_fetch_array($resultForCheckSasia, MYSQLI_BOTH);
 
-    if($rowResultForCheckSasia != null && $rowResultForCheckSasia[0] > 0){
 
+    $checkNumriILibraveTeMare = "select count(*) from TE_MARA where perdoruesId = '$perdorues_id'";
+    $resultForCheckNumriILibraveTeMare = mysqli_query($connection, $checkNumriILibraveTeMare);
+    $rowResultForCheckNumriILibraveTeMare = mysqli_fetch_array($resultForCheckNumriILibraveTeMare, MYSQLI_BOTH);
+
+
+
+    if($rowResultForCheckSasia != null && $rowResultForCheckSasia[0] > 0){
 
         if($rowResultForCheckTeMara == NULL || $rowResultForCheckTeMara[0] == 0){
 
-          //data e marjes dhe e dorezimit te librit
-          $dateMarje = date("Y-m-d");
-          $dateDorezimi = date("Y-m-d", strtotime($dateMarje. "+ 30 days"));
+          if($rowResultForCheckNumriILibraveTeMare != null && $rowResultForCheckNumriILibraveTeMare[0] < 10){
 
-          //shtimi i librit ne tabelen te mara
-          $queryShtoTeTeMara = "insert into TE_MARA values($perdorues_id, $liber_id, '$dateMarje', '$dateDorezimi');";
-          $resultForShtoTeMara = mysqli_query($connection, $queryShtoTeTeMara);
+            //data e marjes dhe e dorezimit te librit
+            $dateMarje = date("Y-m-d");
+            $dateDorezimi = date("Y-m-d", strtotime($dateMarje. "+ 30 days"));
 
-          //ul numrin e librave ne biblioteke me 1
-          $queryUpdateSasia = "update LIBER set sasia = sasia - 1 where liber_id = '$liber_id';";
-          $resultForUpdateSasia = mysqli_query($connection, $queryUpdateSasia);
+            //shtimi i librit ne tabelen te mara
+            $queryShtoTeTeMara = "insert into TE_MARA values($perdorues_id, $liber_id, '$dateMarje', '$dateDorezimi');";
+            $resultForShtoTeMara = mysqli_query($connection, $queryShtoTeTeMara);
 
-          if($resultForShtoTeMara){
-            $queryGetInfoMbiLibrin = "select titulli, autori, zhaneri from LIBER where liber_id = '$liber_id';";
-            $resultForGetInfoMbiLibrin = mysqli_query($connection, $queryGetInfoMbiLibrin);
-            $rowResultForGetInfoMbiLibrin = mysqli_fetch_array($resultForGetInfoMbiLibrin, MYSQLI_BOTH);
-            if($rowResultForGetInfoMbiLibrin != null){
-              echo "success"."++++".$rowResultForGetInfoMbiLibrin['titulli']."++++".$rowResultForGetInfoMbiLibrin['autori']."++++".$rowResultForGetInfoMbiLibrin['zhaneri'];
+            //ul numrin e librave ne biblioteke me 1
+            $queryUpdateSasia = "update LIBER set sasia = sasia - 1 where liber_id = '$liber_id';";
+            $resultForUpdateSasia = mysqli_query($connection, $queryUpdateSasia);
+
+            if($resultForShtoTeMara){
+              $queryGetInfoMbiLibrin = "select titulli, autori, zhaneri from LIBER where liber_id = '$liber_id';";
+              $resultForGetInfoMbiLibrin = mysqli_query($connection, $queryGetInfoMbiLibrin);
+              $rowResultForGetInfoMbiLibrin = mysqli_fetch_array($resultForGetInfoMbiLibrin, MYSQLI_BOTH);
+              if($rowResultForGetInfoMbiLibrin != null){
+                echo "success"."++++".$rowResultForGetInfoMbiLibrin['titulli']."++++".$rowResultForGetInfoMbiLibrin['autori']."++++".$rowResultForGetInfoMbiLibrin['zhaneri'];
+              }else{
+                echo "error";
+              }
             }else{
-              echo "error";
+              echo "nuk u shtua";
             }
-          }else{
-            echo "nuk u shtua";
+
+          }else {
+            echo "Nuk mund te merni me shume se 10 libra";
           }
 
         }else {
           echo "libri ndodhet";
         }
-
-    }
-
-
-
+      }else {
+        echo "Libri nuk eshte ne gjendje";
+      }
 
     }
  ?>

@@ -18,10 +18,12 @@
         <div class="allClass">
           <label for="barcode">Barcode</label><br>
           <input type="number" min="0" name="barcode" id="barcode" class="form-control" placeholder="Barcode"><br>
-          <label for="titulli">Titulli</label><br>
-          <input type="text" name="titulli" id="titulli" class="form-control" class="form-control" placeholder="Titulli"><br>
-          <label for="autori">Autori</label><br>
-          <input type="text" name="autori" id="autori" class="form-control" placeholder="Autori"><br>
+          <label for="titulli">Titulli</label>
+          <input type="text" name="titulli" id="titulli" class="form-control" class="form-control" placeholder="Titulli">
+          <div id="infoTitulli"></div><br>
+          <label for="autori">Autori</label>
+          <input type="text" name="autori" id="autori" class="form-control" placeholder="Autori">
+          <div id="infoAutori"></div><br>
           <label for="zhaneri">Zhaneri</label>
           <select id="zhaneri" class="form-control" name="zhaneri">
             <option value="none">None</option>;
@@ -35,13 +37,15 @@
             <option value="fjalor">Fjalor</option>;
             <option value="enciklopedi">Enciklopedi</option>;
             <option value="tjeter">Tjeter</option>;
-          </select><br>
+          </select>
+          <div id="infoZhaneri"></div><br>
           <label for="vitiIPublikimit">Viti i publikimit</label><br>
           <input type="month" name="vitiIPublikimit" id="vitiIPublikimit" class="form-control"><br>
           <label for="Shtepia botuese">Shtepia botuese</label><br>
           <input type="text" name="shtepiaBotuese" id="shtepiaBotuese" class="form-control" placeholder="Shtepia botuese"><br>
           <label for="sasia">Sasia</label><br>
-          <input type="number" name="sasia" id="sasia" class="form-control" placeholder="Sasia"><br>
+          <input type="number" name="sasia" id="sasia" class="form-control" placeholder="Sasia">
+          <div id="infoSasia"></div><br>
           <label for="pershkrimi">Pershkrimi</label><br>
           <textarea name="pershkrimi" id="pershkrimi" class="form-control" rows="6" cols="40" maxlength="2000" placeholder="Vendosni nje pershkrim te shkurter.." style="resize: none"></textarea><br>
 

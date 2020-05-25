@@ -112,31 +112,74 @@ function modifikoPerdorues(){
     $("#infoRoli").html("<p id = 'infoContent'>*vendos rolin (1 per admin/0 per klient)</p>");
     $("#infoRoli").show();
   }else{
-    $.post("http://localhost/PW/AdminPage/checkModifikimPerdoruesit.php",
-      {perdoruesId: perdoruesId,
-      emri: emri,
-      mbiemri: mbiemri,
-      username: username,
-      password: password,
-      mosha: mosha,
-      gjinia: gjinia,
-      email: email,
-      adresa: adresa,
-      roli:roli,
-      submit:1})
-      .done(function(data){
-        if(data == "success"){
-          window.location = "http://localhost/PW/AdminPage/homeAdmin.php";
-        }else if(data == "username i zene"){
-          $("#infoUsername").html("<p id = 'infoContent'>*username i zene</p>");
-          $("#infoUsername").show();
-        }else if(data == "email i zene"){
-          $("#infoEmail").html("<p id = 'infoContent'>*email i zene</p>");
-          $("#infoEmail").show();
-        }else{
-          alert("error");
+    // $.post("http://localhost/PW/AdminPage/checkModifikimPerdoruesit.php",
+    //   {perdoruesId: perdoruesId,
+    //   emri: emri,
+    //   mbiemri: mbiemri,
+    //   username: username,
+    //   password: password,
+    //   mosha: mosha,
+    //   gjinia: gjinia,
+    //   email: email,
+    //   adresa: adresa,
+    //   roli:roli,
+    //   submit:1})
+    //   .done(function(data){
+    //     if(data == "success"){
+    //       window.location = "http://localhost/PW/AdminPage/homeAdmin.php";
+    //     }else if(data == "username i zene"){
+    //       $("#infoUsername").html("<p id = 'infoContent'>*username i zene</p>");
+    //       $("#infoUsername").show();
+    //     }else if(data == "email i zene"){
+    //       $("#infoEmail").html("<p id = 'infoContent'>*email i zene</p>");
+    //       $("#infoEmail").show();
+    //     }else{
+    //       alert("error");
+    //     }
+    //   });
+
+
+      var fd = new FormData();
+      var file = $("#file")[0].files[0];
+      fd.append('perdoruesId', perdoruesId);
+      fd.append('emri', emri);
+      fd.append('mbiemri', mbiemri);
+      fd.append('username', username);
+      fd.append('password', password);
+      fd.append('mosha', mosha);
+      fd.append('gjinia', gjinia);
+      fd.append('email', email);
+      fd.append('adresa', adresa);
+      fd.append('file', file);
+      fd.append('roli', roli);
+      fd.append('submit', 1);
+
+
+      $.ajax({
+        url: 'http://localhost/PW/AdminPage/checkModifikimPerdoruesit.php',
+        method: 'POST',
+        type: 'POST',
+        data: fd,
+        contentType: false,
+        processData: false,
+        success: function(data){
+          if(data == "success"){
+            window.location = "http://localhost/PW/AdminPage/homeAdmin.php";
+          }else if(data == "username i zene"){
+            $("#infoUsername").html("<p id = 'infoContent'>*username i zene</p>");
+            $("#infoUsername").show();
+          }else if(data == "email i zene"){
+            $("#infoEmail").html("<p id = 'infoContent'>*email i zene</p>");
+            $("#infoEmail").show();
+          }else{
+            alert("error"+data);
+          }
         }
       });
+
+
+
+
   }
 }
 
@@ -186,8 +229,10 @@ function fshiPerdorues(){
         if(data == "success"){
           window.location = "http://localhost/PW/AdminPage/homeAdmin.php";
         }else if(data == "error"){
+          alert(data);
           $("#infoFshi").html("<p id = 'infoContent'>*perdoruesi nuk gjendet</p>");
         }else{
+          alert(data);
           $("#infoFshi").html("<p id = 'infoContent'>*gabim te dhenash</p>");
         }
       });
@@ -290,17 +335,29 @@ function shtoPerdorues(){
     $("#infoAdresa").html("<p id='infoContent'>*vendos adresen</p>");
     $("#infoAdresa").show();
   }else{
-    $.post("http://localhost/PW/Log%20in%20&%20Sing%20up/checkSingup.php",
-      {emri: emri,
-      mbiemri: mbiemri,
-      username: username,
-      password: password,
-      mosha: mosha,
-      gjinia: gjinia,
-      email: email,
-      adresa: adresa,
-      submit:1})
-      .done(function(data){
+
+    var fd = new FormData();
+    var file = $("#file")[0].files[0];
+    fd.append('emri', emri);
+    fd.append('mbiemri', mbiemri);
+    fd.append('username', username);
+    fd.append('password', password);
+    fd.append('mosha', mosha);
+    fd.append('gjinia', gjinia);
+    fd.append('email', email);
+    fd.append('adresa', adresa);
+    fd.append('file', file);
+    fd.append('submit', 1);
+
+
+    $.ajax({
+      url: 'checkShtimiPerdoruesit.php',
+      method: 'POST',
+      type: 'POST',
+      data: fd,
+      contentType: false,
+      processData: false,
+      success: function(data){
         if(data == "success"){
           window.location = "http://localhost/PW/AdminPage/menaxhoPerdorues.php";
         }else if(data == "username i zene"){
@@ -310,7 +367,8 @@ function shtoPerdorues(){
         }else{
           alert("error");
         }
-      });
+      }
+    });
   }
 }
 

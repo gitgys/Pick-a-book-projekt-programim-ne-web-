@@ -29,16 +29,22 @@ function shtoLiber() {
 
   if(titulli == ""){
     //Vendosni titulin
-
+    $("#infoTitulli").html("<p>*vendosni titullin</p>");
   }else if(autori == ""){
     //Vendosni autorin
-
+    $("#infoAutori").html("<p>*vendosni autorin</p>");
+    $("#infoTitulli").html("");
   }else if(zhaneri == null){
     //Vendosni zhanerin
-
+    $("#infoZhaneri").html("<p>*vendosni zhanerin</p>");
+    $("#infoTitulli").html("");
+    $("#infoAutori").html("");
   }else if(sasia == ""){
     //Vendosni sasine
-
+    $("#infoSasia").html("<p>*vendosni sasine</p>");
+    $("#infoTitulli").html("");
+    $("#infoAutori").html("");
+    $("#infoZhaneri").html("");
   }else{
     // $.post("checkShtoLiber.php",
      // {barcode: barcode,
@@ -105,9 +111,6 @@ function shtoLiber() {
       }
 
     })
-
-
-
   }
 }
 
@@ -135,16 +138,22 @@ function modifikoLiber() {
 
   if(titulli == ""){
     //Vendosni titulin
-
+    $("#infoTitulli").html("<p>*vendosni titullin</p>");
   }else if(autori == ""){
     //Vendosni autorin
-
+    $("#infoAutori").html("<p>*vendosni autorin</p>");
+    $("#infoTitulli").html("");
   }else if(zhaneri == null){
     //Vendosni zhanerin
-
+    $("#infoZhaneri").html("<p>*vendosni zhanerin</p>");
+    $("#infoTitulli").html("");
+    $("#infoAutori").html("");
   }else if(sasia == ""){
     //Vendosni sasine
-
+    $("#infoSasia").html("<p>*vendosni sasine</p>");
+    $("#infoTitulli").html("");
+    $("#infoAutori").html("");
+    $("#infoZhaneri").html("");
   }else{
     $.post("checkModifikimLiberi.php",
      {barcode: barcode,

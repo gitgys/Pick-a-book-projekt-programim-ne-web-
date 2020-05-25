@@ -39,9 +39,11 @@
        <label for="barcode">Barcode</label>
        <input type="number" min="0" name="barcode" id="barcode" class="form-control" placeholder="Barcode" value="<?php echo $barcode ?>"><br>
        <label for="titulli">Titulli</label>
-       <input type="text" name="titulli" id="titulli" class="form-control" placeholder="Titulli" value="<?php echo $titulli ?>"><br>
+       <input type="text" name="titulli" id="titulli" class="form-control" placeholder="Titulli" value="<?php echo $titulli ?>">
+       <div id="infoTitulli"></div><br>
        <label for="autori">Autori</label>
-       <input type="text" name="autori" id="autori" class="form-control" placeholder="Autori" value="<?php echo $autori ?>"><br>
+       <input type="text" name="autori" id="autori" class="form-control" placeholder="Autori" value="<?php echo $autori ?>">
+       <div id="infoAutori"></div><br>
        <label for="zhaneri">Zhaneri</label>
        <select id="zhaneri" name="zhaneri" class="form-control">
 
@@ -167,13 +169,15 @@
             <?php
           }
          ?>
-       </select><br>
+       </select>
+       <div id="infoZhaneri"></div><br>
        <label for="vitiIPublikimit">Viti i publikimit</label>
        <input type="month" name="vitiIPublikimit" id="vitiIPublikimit" class="form-control" value="<?php echo "".$vitiIPublikimit."-01" ?>"><br>
        <label for="Shtepia botuese">Shtepia botuese</label>
        <input type="text" name="shtepiaBotuese" id="shtepiaBotuese" class="form-control" placeholder="Shtepia botuese" value="<?php echo $shtepiaBotuese ?>"><br>
        <label for="sasia">Sasia</label>
-       <input type="number" name="sasia" id="sasia" class="form-control" placeholder="Sasia" value="<?php echo $sasia ?>"><br>
+       <input type="number" name="sasia" id="sasia" class="form-control" placeholder="Sasia" value="<?php echo $sasia ?>">
+       <div id="infoSasia"></div><br>
        <label for="pershkrimi">Pershkrimi</label><br>
        <textarea name="pershkrimi" id="pershkrimi" class="form-control" rows="6" cols="40" maxlength="2000" placeholder="Vendosni nje pershkrim te shkurter.." style="resize: none"><?php echo $pershkrimi ?></textarea><br>
 

@@ -43,6 +43,7 @@ if(!isset($_REQUEST['perdoruesId'])){
     <div class="allClass">
       <div id="all">
         <h3>Modifiko</h3>
+        Perdorues Id:<p id="perdoruesId"><?php echo $perdoruesId; ?></p>
         <div id="emeriDiv">
           Emri <input type="text" class="form-control" name="emri" id="emri" placeholder="Emri" value="<?php echo $emri ?>">
           <div id="infoEmri"></div>
@@ -113,6 +114,9 @@ if(!isset($_REQUEST['perdoruesId'])){
           Roli <input type="number" class="form-control" min="0" max="1" name="roli" id="roli" placeholder="Roli" value="<?php echo $roli ?>">
         </div>
         <div id="infoRoli"></div>
+        <div class="file">
+          <input type="file" name="file" id="file">
+        </div>
         <div id="buttonatDiv">
           <div id="modifikoDiv">
             <input type="submit" class="btn btn-success" name="modifiko" id="modifiko" value="Modifiko" onclick="modifikoPerdorues()">
